@@ -21,7 +21,7 @@ const IconButton = <Component extends ElementType ='button'>({
       className: cn('p-1.5 lg:p-2', className),
       ...props,
     },
-    <Icon calcMode={cn('h-5 w-5 transition-all lg:h-6 lg:w-6', iconClassName)}/>
+    <Icon className={cn('h-5 w-5 transition-all lg:h-6 lg:w-6', iconClassName)}/>
   )
 }
 
