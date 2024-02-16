@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BsPencilSquare } from "react-icons/bs";
+import IconButton from "./IconComponent";
 
 export default function Footer () {
   return <footer className='flex border-t p-4 justify-between font-medium'>
@@ -17,12 +18,8 @@ export default function Footer () {
       <div className="pr-1 text-sm lg:pr-2 lg:text-base">
         ADMIN
       </div>
-      <Link href='/admin'>
-        <AiOutlineSetting className="h-5 w-5 text-gray-400 transition-all hover:text-gray-600 lg:h-6 lg:w-6"/>
-      </Link>
-      <Link href='/write'>
-        <BsPencilSquare className="h-5 w-5 text-gray-400 transition-all hover:text-gray-600 lg:h-6 lg:w-6"/>
-      </Link>
+      <IconButton  Icon={AiOutlineSetting} component={Link} href='/admin' className="text-gray-400 hover:text-gray-600"/>
+      <IconButton  Icon={BsPencilSquare} component={Link} href='/write' className="text-gray-400 hover:text-gray-600"/>
     </div>
   </footer>
 }

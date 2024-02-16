@@ -1,6 +1,7 @@
 import { cn } from "@/utils/style";
 import Link from "next/link";
 import { AiFillGithub, AiFillInstagram, AiOutlineClose } from "react-icons/ai";
+import IconButton from "./IconComponent";
 
 interface SidebarProps {
   close: () => void;
@@ -22,12 +23,8 @@ export default function Sidebar({isOpen, close}: SidebarProps) {
       Web Development
     </Link>
     <div className="mt-10 flex items-center gap-4">
-      <Link href='/' target="_blank">
-        <AiFillGithub />
-      </Link>
-      <Link href='/' target="_blank">
-        <AiFillInstagram />
-      </Link>
+      <IconButton Icon={AiFillGithub} component={Link} href='/' target='_blank' />
+      <IconButton Icon={AiFillInstagram} component={Link} href='/' target='_blank' />
     </div>
   </div>
 }
