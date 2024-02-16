@@ -18,7 +18,7 @@ export default function Sidebar({isOpen, close}: SidebarProps) {
     <Link href='/tag' className="w-48 font-medium text-gray-600 hover:underline">
       태그
     </Link>
-    <Link href='/catehory/web-debelopment'>
+    <Link href='/category/web-debelopment'>
       Web Development
     </Link>
     <div className="mt-10 flex items-center gap-4">
